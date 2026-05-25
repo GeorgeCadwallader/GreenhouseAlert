@@ -126,7 +126,11 @@ function buildNotificationBody({
   const untilMs = peakDate.getTime() - Date.now();
   const localTime = formatLocalTime(peakDate, timezone);
   const prefix =
-    reason === "gust-increased" ? "Updated forecast: " : "";
+    reason === "gust-increased"
+      ? "Updated forecast: "
+      : reason === "test-override"
+        ? "[Test] "
+        : "";
 
   return (
     `${prefix}Gusts of ${Math.round(peakGust)} mph expected at ${localTime} (in ${formatDuration(untilMs)}). ` +
@@ -151,6 +155,9 @@ async function main() {
   console.log("GreenhouseAlert check starting");
   console.log("Location: lat=*** lon=***");
   if (dryRun) console.log("Dry run — no notification or state write");
+  if (config.bypassAntiSpam) {
+    console.log("bypassAntiSpam is ON — repeat alerts will not be suppressed");
+  }
 
   const now = new Date();
   const nowIso = now.toISOString();
@@ -191,7 +198,9 @@ async function main() {
       return;
     }
 
-    const decision = shouldNotify(state, config, peakGust);
+    const decision = config.bypassAntiSpam
+      ? { notify: true, reason: "test-override" }
+      : shouldNotify(state, config, peakGust);
 
     if (!decision.notify) {
       console.log(
@@ -204,7 +213,9 @@ async function main() {
     const title =
       decision.reason === "gust-increased"
         ? "Greenhouse wind alert (updated)"
-        : "Greenhouse wind alert";
+        : decision.reason === "test-override"
+          ? "Greenhouse wind alert (test)"
+          : "Greenhouse wind alert";
 
     const body = buildNotificationBody({
       peakGust,

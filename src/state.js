@@ -13,7 +13,7 @@ const HISTORY_DAYS = 7;
  * @property {string} forPeakHour
  * @property {number} gustMph
  * @property {number} sustainedMph
- * @property {'first-breach'|'cooldown-expired'|'gust-increased'} reason
+ * @property {'first-breach'|'cooldown-expired'|'gust-increased'|'test-override'} reason
  */
 
 /**

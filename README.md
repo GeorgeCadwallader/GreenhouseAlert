@@ -116,6 +116,7 @@ All settings live in [`config.json`](config.json):
 | `checkWindowHours` | `24` | How much forecast to fetch each run |
 | `renotifyCooldownHours` | `6` | Minimum hours between repeat alerts for the same event |
 | `renotifyIfGustIncreasesByMph` | `5` | Send an "updated forecast" if peak gust jumps by this much |
+| `bypassAntiSpam` | `false` | **Testing only.** If `true`, sends an alert on every breach even if one was sent recently. Set back to `false` when done |
 | `timezone` | `Europe/London` | Timezone for times shown in notifications |
 
 **Tip:** Narrow greenhouses often fail from **gusts**, not average wind. Many setups use a lower sustained threshold and a higher gust threshold — adjust to what your structure can handle (check manufacturer guidance if you have it).
@@ -190,6 +191,7 @@ npm run check
 | Wrong location | Double-check lat/lon aren't swapped; lat is -90…90, lon is -180…180 |
 | Too many alerts | Raise thresholds or increase `renotifyCooldownHours` |
 | Too few alerts | Lower thresholds or increase `leadTimeHours` |
+| Testing ntfy / repeat alerts | Set `"bypassAntiSpam": true` temporarily (still needs a forecast breach). Use low thresholds to force a breach, then set `bypassAntiSpam` back to `false` |
 | State branch missing | First successful run creates it automatically |
 
 ---
