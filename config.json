@@ -1,5 +1,5 @@
 {
-  "sustainedThresholdMph": 30,
+  "sustainedThresholdMph": 1,
   "gustThresholdMph": 45,
   "leadTimeHours": 2,
   "checkWindowHours": 24,
