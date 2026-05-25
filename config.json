@@ -1,10 +1,10 @@
 {
-  "sustainedThresholdMph": 1,
-  "gustThresholdMph": 45,
+  "sustainedThresholdMph": 18,
+  "gustThresholdMph": 26,
   "leadTimeHours": 2,
   "checkWindowHours": 24,
   "renotifyCooldownHours": 6,
   "renotifyIfGustIncreasesByMph": 5,
-  "bypassAntiSpam": true,
+  "bypassAntiSpam": false,
   "timezone": "Europe/London"
 }
