@@ -2,8 +2,8 @@ name: Check wind
 
 on:
   schedule:
-    # Every 15 minutes (GitHub cron uses UTC)
-    - cron: "*/15 * * * *"
+    # Every 30 minutes (GitHub cron uses UTC)
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:

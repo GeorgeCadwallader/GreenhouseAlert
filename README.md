@@ -2,7 +2,7 @@
 
 **Get a phone notification before high winds hit your greenhouse — free, open source, no phone numbers.**
 
-Born from a narrow greenhouse that fell over twice in the wind. This little bot checks the forecast every 15 minutes and pings you (and anyone you share the alert with) when gusts or sustained wind are expected to exceed your thresholds — *before* they arrive.
+Born from a narrow greenhouse that fell over twice in the wind. This little bot checks the forecast every 30 minutes and pings you (and anyone you share the alert with) when gusts or sustained wind are expected to exceed your thresholds — *before* they arrive.
 
 ---
 
@@ -10,7 +10,7 @@ Born from a narrow greenhouse that fell over twice in the wind. This little bot 
 
 - Monitors wind forecasts via [Open-Meteo](https://open-meteo.com/) (free, no API key)
 - Sends push notifications through [ntfy.sh](https://ntfy.sh) (free, Android + iOS)
-- Runs on GitHub Actions on a 15-minute schedule (free for public repos)
+- Runs on GitHub Actions on a 30-minute schedule (free for public repos)
 - Alerts **up to N hours before** the wind hits (configurable)
 - Separate thresholds for **gusts** and **sustained** wind
 - Supports **multiple recipients** — anyone subscribed to your topic gets the alert
@@ -23,7 +23,7 @@ Born from a narrow greenhouse that fell over twice in the wind. This little bot 
 
 ```mermaid
 flowchart LR
-    Cron["GitHub Actions cron<br/>every 15 min"] --> Checkout[Checkout main]
+    Cron["GitHub Actions cron<br/>every 30 min"] --> Checkout[Checkout main]
     Checkout --> Script[node src/check.js]
     Script --> OpenMeteo["Open-Meteo API<br/>(forecast hourly mph<br/>by lat/lon)"]
     Script --> StateRead["Read state branch<br/>state.json"]
@@ -34,7 +34,7 @@ flowchart LR
     StateWrite --> Commit["Commit and push<br/>to state branch"]
 ```
 
-1. GitHub Actions runs `src/check.js` every 15 minutes.
+1. GitHub Actions runs `src/check.js` every 30 minutes.
 2. The script fetches hourly wind forecast for your lat/lon.
 3. It looks at the next *N* hours (your `leadTimeHours` setting).
 4. If gusts or sustained wind exceed your thresholds, it sends a push via ntfy — unless it already notified you recently (anti-spam).
@@ -127,7 +127,7 @@ All settings live in [`config.json`](config.json):
 
 Anyone who:
 
-1. Installs the ntfy app, and  
+1. Installs the ntfy app, and
 2. Subscribes to your **same topic name**
 
 …will receive every alert. Share the topic via a private message — treat it like a password.
