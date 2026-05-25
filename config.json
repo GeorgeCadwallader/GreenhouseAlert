@@ -1,0 +1,9 @@
+{
+  "sustainedThresholdMph": 30,
+  "gustThresholdMph": 45,
+  "leadTimeHours": 2,
+  "checkWindowHours": 24,
+  "renotifyCooldownHours": 6,
+  "renotifyIfGustIncreasesByMph": 5,
+  "timezone": "Europe/London"
+}

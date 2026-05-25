@@ -1,0 +1,17 @@
+{
+  "name": "greenhouse-alert",
+  "version": "1.0.0",
+  "description": "Wind alert system for greenhouses — notifies via ntfy.sh when forecast wind exceeds thresholds",
+  "type": "module",
+  "scripts": {
+    "check": "node src/check.js",
+    "check:dry-run": "node src/check.js --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
