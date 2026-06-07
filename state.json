@@ -1,12 +1,12 @@
 {
   "current": {
-    "lastRunAt": "2026-06-07T02:10:58.557Z",
+    "lastRunAt": "2026-06-07T06:45:51.127Z",
     "lastBreach": null
   },
   "history": [
     {
       "date": "2026-06-07",
-      "runs": 1,
+      "runs": 2,
       "errors": 0,
       "maxGustForecastMph": 29.3,
       "maxSustainedForecastMph": 15.2,
