@@ -1,17 +1,12 @@
 {
   "current": {
-    "lastRunAt": "2026-06-26T15:35:34.519Z",
-    "lastBreach": {
-      "notifiedAt": "2026-06-26T11:19:58.697Z",
-      "peakHour": "2026-06-26T13:00",
-      "peakGustMph": 32,
-      "peakSustainedMph": 16.6
-    }
+    "lastRunAt": "2026-06-26T17:27:53.970Z",
+    "lastBreach": null
   },
   "history": [
     {
       "date": "2026-06-26",
-      "runs": 6,
+      "runs": 7,
       "errors": 0,
       "maxGustForecastMph": 33.1,
       "maxSustainedForecastMph": 17,
