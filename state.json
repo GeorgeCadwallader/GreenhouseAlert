@@ -1,6 +1,6 @@
 {
   "current": {
-    "lastRunAt": "2026-08-11T22:28:54.965Z",
+    "lastRunAt": "2026-08-11T23:11:21.148Z",
     "lastBreach": {
       "notifiedAt": "2026-08-11T22:28:54.965Z",
       "peakHour": "2026-08-12T00:00",
@@ -11,11 +11,11 @@
   "history": [
     {
       "date": "2026-08-11",
-      "runs": 20,
+      "runs": 21,
       "errors": 0,
       "maxGustForecastMph": 28.9,
       "maxSustainedForecastMph": 14.1,
-      "breachesDetected": 1,
+      "breachesDetected": 2,
       "notificationsSent": 1,
       "notifications": [
         {
