@@ -1,15 +1,15 @@
 {
   "current": {
-    "lastRunAt": "2026-08-12T12:38:59.484Z",
+    "lastRunAt": "2026-08-12T14:10:45.064Z",
     "lastBreach": null
   },
   "history": [
     {
       "date": "2026-08-12",
-      "runs": 9,
+      "runs": 10,
       "errors": 0,
       "maxGustForecastMph": 26.6,
-      "maxSustainedForecastMph": 13,
+      "maxSustainedForecastMph": 13.2,
       "breachesDetected": 1,
       "notificationsSent": 0,
       "notifications": []
