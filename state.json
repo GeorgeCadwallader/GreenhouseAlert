@@ -1,9 +1,19 @@
 {
   "current": {
-    "lastRunAt": "2026-08-31T23:56:44.867Z",
+    "lastRunAt": "2026-09-01T02:50:49.130Z",
     "lastBreach": null
   },
   "history": [
+    {
+      "date": "2026-09-01",
+      "runs": 1,
+      "errors": 0,
+      "maxGustForecastMph": 22.1,
+      "maxSustainedForecastMph": 11.2,
+      "breachesDetected": 0,
+      "notificationsSent": 0,
+      "notifications": []
+    },
     {
       "date": "2026-08-31",
       "runs": 5,
@@ -79,24 +89,6 @@
       "breachesDetected": 0,
       "notificationsSent": 0,
       "notifications": []
-    },
-    {
-      "date": "2026-08-25",
-      "runs": 31,
-      "errors": 0,
-      "maxGustForecastMph": 29.5,
-      "maxSustainedForecastMph": 14.1,
-      "breachesDetected": 2,
-      "notificationsSent": 1,
-      "notifications": [
-        {
-          "at": "2026-08-25T06:23:01.272Z",
-          "forPeakHour": "2026-08-25T08:00",
-          "gustMph": 27.1,
-          "sustainedMph": 13.2,
-          "reason": "first-breach"
-        }
-      ]
     }
   ]
 }
