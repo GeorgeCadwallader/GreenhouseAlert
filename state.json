@@ -1,23 +1,31 @@
 {
   "current": {
-    "lastRunAt": "2026-09-04T00:15:58.977Z",
+    "lastRunAt": "2026-09-04T04:54:06.068Z",
     "lastBreach": {
-      "notifiedAt": "2026-09-03T22:12:40.603Z",
-      "peakHour": "2026-09-04T00:00",
-      "peakGustMph": 27.3,
-      "peakSustainedMph": 14.1
+      "notifiedAt": "2026-09-04T04:54:06.068Z",
+      "peakHour": "2026-09-04T05:00",
+      "peakGustMph": 40.3,
+      "peakSustainedMph": 20.8
     }
   },
   "history": [
     {
       "date": "2026-09-04",
-      "runs": 1,
+      "runs": 2,
       "errors": 0,
-      "maxGustForecastMph": 37.6,
-      "maxSustainedForecastMph": 19.5,
-      "breachesDetected": 1,
-      "notificationsSent": 0,
-      "notifications": []
+      "maxGustForecastMph": 40.3,
+      "maxSustainedForecastMph": 20.8,
+      "breachesDetected": 2,
+      "notificationsSent": 1,
+      "notifications": [
+        {
+          "at": "2026-09-04T04:54:06.068Z",
+          "forPeakHour": "2026-09-04T05:00",
+          "gustMph": 40.3,
+          "sustainedMph": 20.8,
+          "reason": "cooldown-expired"
+        }
+      ]
     },
     {
       "date": "2026-09-03",
