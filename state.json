@@ -1,14 +1,32 @@
 {
   "current": {
-    "lastRunAt": "2026-11-23T21:47:53.655Z",
+    "lastRunAt": "2026-11-24T05:39:15.272Z",
     "lastBreach": {
-      "notifiedAt": "2026-11-23T21:47:53.655Z",
-      "peakHour": "2026-11-23T22:00",
-      "peakGustMph": 30,
-      "peakSustainedMph": 15.2
+      "notifiedAt": "2026-11-24T05:39:15.272Z",
+      "peakHour": "2026-11-24T06:00",
+      "peakGustMph": 31.3,
+      "peakSustainedMph": 15.4
     }
   },
   "history": [
+    {
+      "date": "2026-11-24",
+      "runs": 1,
+      "errors": 0,
+      "maxGustForecastMph": 33.6,
+      "maxSustainedForecastMph": 17,
+      "breachesDetected": 1,
+      "notificationsSent": 1,
+      "notifications": [
+        {
+          "at": "2026-11-24T05:39:15.272Z",
+          "forPeakHour": "2026-11-24T06:00",
+          "gustMph": 31.3,
+          "sustainedMph": 15.4,
+          "reason": "cooldown-expired"
+        }
+      ]
+    },
     {
       "date": "2026-11-23",
       "runs": 2,
@@ -84,24 +102,6 @@
       "breachesDetected": 0,
       "notificationsSent": 0,
       "notifications": []
-    },
-    {
-      "date": "2026-11-17",
-      "runs": 2,
-      "errors": 0,
-      "maxGustForecastMph": 31.5,
-      "maxSustainedForecastMph": 16.6,
-      "breachesDetected": 1,
-      "notificationsSent": 1,
-      "notifications": [
-        {
-          "at": "2026-11-17T08:37:29.752Z",
-          "forPeakHour": "2026-11-17T10:00",
-          "gustMph": 26.4,
-          "sustainedMph": 13.6,
-          "reason": "first-breach"
-        }
-      ]
     }
   ]
 }
